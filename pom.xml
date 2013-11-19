@@ -26,11 +26,43 @@
     </modules>
 
     <scm>
-        <url>git@github.com:astuetz/PagerSlidingTabStrip.git</url>
-        <connection>scm:git:git://github.com:astuetz/PagerSlidingTabStrip.git</connection>
-        <developerConnection>scm:git:git@github.com:astuetz/PagerSlidingTabStrip.git</developerConnection>
+        <url>git@github.com:ikravchenko/PagerSlidingTabStrip.git</url>
+        <connection>scm:git:git://github.com:ikravchenko/PagerSlidingTabStrip.git</connection>
+        <developerConnection>scm:git:git@github.com:ikravchenko/PagerSlidingTabStrip.git</developerConnection>
     </scm>
+	
+	<distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>nexus</id>
+            <name>doo releases maven repo</name>
+            <url>http://nexus.doo.net/nexus/content/repositories/releases/</url>
+            <layout>default</layout>
+        </repository>
 
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>nexus</id>
+            <name>doo snapshots maven repo</name>
+            <url>http://nexus.doo.net/nexus/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+
+	<repositories>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://nexus.doo.net/nexus/content/repositories/releases/</url>
+            <layout>default</layout>
+        </repository>
+
+        <repository>
+            <id>nexus-snapshots</id>
+            <url>http://nexus.doo.net/nexus/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+	
     <licenses>
         <license>
             <name>Apache License Version 2.0</name>
